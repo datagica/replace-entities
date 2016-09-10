@@ -12,6 +12,9 @@
     "url": "https://bitbucket.org/datagica/replace-entities.git"
   },
   "keywords": [],
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./lib/replace-entities.js",
   "devDependencies": {
     "chai": "^3.5.0",
