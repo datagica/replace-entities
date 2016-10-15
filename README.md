@@ -10,10 +10,11 @@ Given some text:
 
 ```javascript
 const content = [
-  `lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum abcedfghij lorem ipsum `,
-  `lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum klmno`,
-  `pqrst lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum `,
-  `lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum`
+  `lorem ipsum lorem ipsum lorem ipsum lorem
+   ipsum lorem ipsum abcedfghij lorem ipsum `,
+  `lorem ipsum lorem ipsum lorem ipsum lorem
+   ipsum lorem ipsum lorem ipsum klmno`,
+  `pqrst lorem ipsum lorem ipsum lorem ipsum`
 ]
 ```
 
