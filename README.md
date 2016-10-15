@@ -53,39 +53,38 @@ const sequence = replace({
 });
 
 [
-  "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
-  "\n",
-  {
-    "data": "foo",
-    "position": {
-      "score": 1,
-      "index": 1,
-      "end": 60,
-      "ngram": "abcedfghij",
-      "begin": 50
-    }
-  },
-  " lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
-  "\n",
-  {
-    "data": "bar",
-    "position": {
-      "score": 1,
-      "index": 2,
-      "end": 110,
-      "ngram": "klmnopqrst",
-      "begin": 100
-    }
-  },
-  " lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-  "\n"
+"lorem ipsum lorem ipsum lorem ipsum lorem",
+"\n",
+"       ipsum lorem ipsum ",
+{
+  "position": {
+    "score": 1,
+    "index": 1,
+    "end": 60,
+    "ngram": "abcedfghij",
+    "begin": 50
+  }
+},
+" lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem",
+"\n",
+"       ipsum lorem ipsum lorem ipsum ",
+{
+  "position": {
+    "score": 1,
+    "index": 2,
+    "end": 110,
+    "ngram": "klmnopqrst",
+    "begin": 100
+  }
+},
+" lorem ipsum lorem ipsum lorem ipsum"
 ]
 ```
 
 which is then easy to convert to HTML:
 
 ```javascript
-sequence.map(x => (
+sequence.map(item => (
   item === '\n'            ? '<br/>'
   typeof item === 'string' ? item
                            :
@@ -102,9 +101,9 @@ or JSX!
 ```javascript
 <MyReactComponent>
   {sequence.map(x => (
-    item === '\n'            ? <br/>
-    typeof item === 'string' ? <span>{item}</span>
-                             : <a href="#">{item.data}</a>
+    x === '\n'            ? <br/>
+    typeof x === 'string' ? <span>{x}</span>
+                          : <a href="#">{x.data}</a>
   ))}
 </MyReactComponent>
 ```
