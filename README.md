@@ -51,11 +51,7 @@ const sequence = replace({
   entities: entities,
   content: content
 });
-```
 
-into the following sequence:
-
-```javascript
 [
   "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ",
   "\n",

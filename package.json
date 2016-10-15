@@ -1,7 +1,7 @@
 {
   "name": "@datagica/replace-entities",
   "description": "Replace entities",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "test": "node_modules/.bin/mocha --harmony --bail --require chai tests/*.js"
   },
